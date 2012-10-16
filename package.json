@@ -1,0 +1,7 @@
+{
+	"name":"backstage"
+	, "version" : "0.0.1"
+	, "author" : "jsmarkus"
+	, "description" : "backbone to knockout connector"
+	, "keywords" : ["knockout","backbone","mvc","client","browserify"]
+}

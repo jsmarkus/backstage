@@ -1,0 +1,10 @@
+{
+	"name":"bbko-example-tweets"
+	, "version":"0.0.1"
+	, "private":true
+	, "dependencies":{
+		"br-jquery":"*"
+		, "backbone":"*"
+		, "knockoutify":"*"
+	}
+}
