@@ -45,8 +45,8 @@ module.exports = ({backbone, knockout})->
 		collectionToVm : (collection)->
 			@modelToVm m for m in collection.models
 
-		onCollectionAdd:(model, collection)=>
-			@vmInsert model
+		onCollectionAdd:(model, collection, {at, index})=>
+			@vmInsert model, index
 
 		onCollectionRemove:(model, collection)=>
 			@vmRemove model
@@ -60,8 +60,8 @@ module.exports = ({backbone, knockout})->
 		onCollectionClear:(collection)=>
 			@vmClear()
 
-		vmInsert : (model)->
-			@vm.items.push @modelToVm model
+		vmInsert : (model, index)->
+			@vm.items.splice index, 0, @modelToVm model
 		vmClear : ->
 			@vm.items []
 		vmReset : (collection)->
