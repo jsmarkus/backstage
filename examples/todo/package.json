@@ -4,6 +4,9 @@
 	, "private":true
 	, "dependencies":{
 		"br-jquery":"*"
+		, "browserify":"*"
+		, "resourcify":"*"
+		, "jade":"*"
 		, "backbone":"*"
 		, "knockoutify":"*"
 	}
