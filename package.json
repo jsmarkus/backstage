@@ -1,7 +1,11 @@
 {
 	"name":"backstage"
-	, "version" : "0.0.1"
+	, "version" : "0.0.2"
 	, "author" : "jsmarkus"
 	, "description" : "backbone to knockout connector"
 	, "keywords" : ["knockout","backbone","mvc","client","browserify"]
+	, "repository": {
+    	"type": "git",
+    	"url": "https://github.com/jsmarkus/backstage"
+  	}
 }
