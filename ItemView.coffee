@@ -13,6 +13,7 @@ module.exports = ({backbone, knockout})->
 			if @model then @unsubscribeFromModel @model
 			@model = model
 			@subscribeToModel @model
+			@updateVmSpecialFields @model
 			@afterSubscribeToModel?()
 
 		subscribeToModel : (model)->
@@ -28,6 +29,9 @@ module.exports = ({backbone, knockout})->
 		updateVm : (model, fieldValues)->
 			for field in @fields when fieldValues.hasOwnProperty field
 				@vm[field] fieldValues[field]
+			@updateVmSpecialFields model
+
+		updateVmSpecialFields : (model)->
 			@vm.$isNew model.isNew()
 
 		onVmChange : (field, value)=>
