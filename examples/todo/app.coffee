@@ -10,7 +10,8 @@ TodoCollection = require './models/TodoCollection'
 #---------------------------------------------------------------------
 
 class App extends bb.View
-	my : (obj)-> obj.app = @
+	my : (obj)->
+		obj.app = @
 
 	initViewModel : ->
 		@vm = {}
@@ -22,6 +23,7 @@ class App extends bb.View
 			currentTodo : @my new TodoModel
 
 	render : ->
+		@$el.html do require './templates/app'
 		console.log 'rendered'
 
 #---------------------------------------------------------------------
