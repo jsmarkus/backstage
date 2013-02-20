@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title></title>
+    <script src="jquery-1.9.1.js"></script>
+    <script src="underscore.js"></script>
+    <script src="backbone.js"></script>
+    <script src="knockout-2.2.1.js"></script>
+    <script src="dist/backstage.js"></script>
+</head>
+<body>
+    <script>
+        backstage.inject({
+            backbone : Backbone,
+            knockout : ko
+        });
+        var ItemView = backstage.factory('ItemView')
+        var ListView = backstage.factory('ListView')
+    </script>
+</body>
+</html>
